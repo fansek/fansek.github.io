@@ -1,1 +1,40 @@
-hello world
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>D3.xml Example</title>
+  <script type="text/javascript" src="d3.js"></script>
+  <style type="text/css">
+    .chart div {
+      font: 14px sans-serif;
+      background-color: steelblue;
+      text-align: left;
+      padding: 3px;
+      margin: 1px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="chart" class="chart">
+
+  </div>
+  <script>
+    d3.xml("coverage_report.xml", "application/xml", function(xml) {
+      d3.select("#chart")
+        .selectAll("div")
+        .data(xml.documentElement.getElementsByTagName("class"))
+        .enter().append("div")
+        // .style("width", function(d) {
+        //   return d.childNodes[0].value * 10 + "px";
+        // })
+        .text(function(d) {
+          return d.attributes.getNamedItem("name").value;
+        });
+    });
+  </script>
+</body>
+
+</html>
