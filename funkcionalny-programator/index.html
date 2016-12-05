@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/theme-white.css">
 
 	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/hljs-syntax-custom.css">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -27,14 +27,118 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>Funkcionálny programátor</h1>
-				<aside class="notes">poznamky ku slidu</aside>
+				<h1>Funkcionálny Programátor</h1>
 			</section>
 			<section>
-				<h2>O mne</h2>
+				<h2>O mne...</h2>
 				<ul>
-					<li>FMFI UK, informatika</li>
-					<li>Accenture, >5 rokov</li>
+					<li>frantisek.grega</li>
+					<li>@accenture.com
+						<ul>
+							<li>java programátor</li>
+							<li>5 rokov</li>
+						</ul>
+					</li>
+					<li>@fmph.uniba.sk
+						<ul>
+							<li>odbor informatika</li>
+							<li>2006 - 2011</li>
+						</ul>
+					</li>
+				</ul>
+				<!--<aside class="notes">poznamky ku slidu</aside>-->
+			</section>
+			<section>
+				<h2>Ciele</h2>
+				<ul>
+					<li>Clean Code</li>
+					<li>Functional Programming</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Moj pribeh</h2>
+				<ul>
+					<li>nerealisticke predstavy</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Udrzba existujuceho softveru</h2>
+				<ul>
+					<li>development vs. maintenance</li>
+					<li>starnutie kodu
+						<ul>
+							<li>miesanie myslienok</li>
+							<li>zabudanie</li>
+							<li>faktor timu</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Dolezita zrucnost programatora</h2>
+				<ul>
+					<li>Efektivna praca s historickym kodom</li>
+					<li><a href="https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052">Working Effectively Legacy by Michael Feathers</a></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Faktory vplývajúce na efektivitu</h2>
+				<ul>
+					<li>skúsenosti programátora</li>
+					<li>kvalita kódu</li>
+					<li>rýchla spätná väzba</li>
+				</ul>
+			</section>
+			<section>
+				<blockquote>Vaša schopnosť porozumieť kódu je kritická na to aby ste ho menili bez strachu z chyby.</blockquote>
+			</section>
+			<section>
+				<h2>Clean code</h2>
+				<ul>
+					<li>Don’t repeat yourself (DRY)</li>
+					<li>Single responsibility principle (SRP)</li>
+					<li>Keep it simple, stupid (KISS)</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Jednoduchosť</h2>
+				<ul>
+					<li>jednoduchý vs. ľahký</li>
+					<li><a href="https://www.infoq.com/presentations/Simple-Made-Easy">Simple Made Easy</a></li>
+				</ul>
+			</section>
+			<section>
+				<blockquote>"Zdá sa, že dokonalosť sa nedosahuje vtedy, keď už nie je možné nič pridať, ale vtedy, keď už nie je možné nič odobrať."
+					Antoine de Saint-Exupéry</blockquote>
+			</section>
+			<section>
+				<h2>Funkcionálne programovanie</h2>
+				<ul>
+					<li>Nemeniteľné dátové štruktúry</li>
+					<li>Vedľajšie efekty</li>
+					<li>Stav a jednoduchosť sa nemajú radi</li>
+					<li>Okamih vs. cas</li>
+					<li><a href="http://www.tyzden.sk/podlampou/20070/lampa-isaac-newton/">Lampa: Isaac Newton</a></li>
+				</ul>
+			</section>
+			<section>
+				<pre><code data-trim class="js">
+function program (args) {
+   for (var i = 0; i < args.length; i++) {
+      console.log(args[i]);
+   }
+}
+				</code></pre>
+			</section>
+			<section>
+				<h2>Záver</h2>
+				<ul>
+					<li>Isaac Newton</li>
+					<li>Pozorovanie vs. objavovanie</li>
+					<li>Priestor vs. časopriestor</li>
+					<li>F = m * a</li>
+					<li>Okamih vs. čas</li>
+					<li><a href="http://www.tyzden.sk/podlampou/20070/lampa-isaac-newton/">Lampa: Isaac Newton</a></li>
 				</ul>
 			</section>
 		</div>
