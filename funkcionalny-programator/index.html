@@ -39,47 +39,81 @@
 							<li>5 rokov</li>
 						</ul>
 					</li>
-					<li>@fmph.uniba.sk
+					<li>matfyz
 						<ul>
 							<li>odbor informatika</li>
 							<li>2006 - 2011</li>
 						</ul>
 					</li>
 				</ul>
-				<!--<aside class="notes">poznamky ku slidu</aside>-->
+				<aside class="notes">
+					<ul>
+						<li>mozete sa hrat so mnou: otvorte si tuto prezentaciu na NB</li>
+						<li>Ctrl+Shift+I (alebo Cmd+Opt+I on Mac) DevTools</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
-				<h2>Ciele</h2>
+				<h2>Úvod</h2>
 				<ul>
-					<li>Clean Code</li>
-					<li>Functional Programming</li>
+					<li>Ciele</li>
+					<li>Môj príbeh</li>
 				</ul>
+				<aside class="notes">
+					<ul>
+						<li>osobny pribeh, prax vs teoria</li>
+						<li>cesta funkcionalneho programatora</li>
+						<li>prerusujte ma, pytajte sa...</li>
+						<li>kratky cas, nieco iba spomeniem</li>
+						<li>ciel: ukazat novy rozmer prace programatora (teda taky, o akom som pred vstupom do zamestnania netusil)</li>
+						<li>Mimoriadne kreativne zamestnanie</li>
+						<li>Caste netrivialne / tazke rozhodovanie</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
-				<h2>Moj pribeh</h2>
-				<ul>
-					<li>nerealisticke predstavy</li>
-				</ul>
+				<h2>Vývoj vs. údržba</h2>
+				<aside class="notes">
+					<ul>
+						<li>jedna z prvych otazok, ked som stal pred vyberom projektu</li>
+						<li>co by ste si vybrali vy?</li>
+						<li>mame radi vyzvy</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
-				<h2>Udrzba existujuceho softveru</h2>
+				<h2>Údržba existujúceho softvéru</h2>
 				<ul>
-					<li>development vs. maintenance</li>
-					<li>starnutie kodu
+					<li>čas strávený písaním vs. čítaním kódu - čoho je viac?</li>
+					<li>starnutie kódu
 						<ul>
-							<li>miesanie myslienok</li>
-							<li>zabudanie</li>
-							<li>faktor timu</li>
+							<li>miešanie myšlienok</li>
+							<li>zabúdanie</li>
+							<li>faktor tímu</li>
 						</ul>
 					</li>
 				</ul>
+				<aside class="notes">
+					<ul>
+						<li>programator vacsinu casu udrziava existujuci kod</li>
+						<li>okrem toho: byrokracia, politika, komunikacia, ... (o tomto dnes nie je)</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
-				<h2>Dolezita zrucnost programatora</h2>
+				<h2>Dôležitá zručnosť programátora</h2>
 				<ul>
-					<li>Efektivna praca s historickym kodom</li>
-					<li><a href="https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052">Working Effectively Legacy by Michael Feathers</a></li>
+					<li>Efektívna práca s historickým kódom</li>
+					<li><a href="https://www.google.sk/search?q=Working+Effectively+with+Legacy+Code&oq=Working+Effectively+with+Legacy+Code&aqs=chrome..69i57j0j69i59j69i60j0l2.388j0j7&sourceid=chrome&ie=UTF-8#q=working+effectively+with+legacy+code&safe=off&tbm=bks">Working Effectively with Legacy Code</a></li>
 				</ul>
+				<aside class="notes">
+					<ul>
+						<li>velmi vhodna do praxe</li>
+						<li>postup: ak je potrebne napriklad najst a opravit chybu v kode, naimplementovat novu vlastnost / funkciu...</li>
+						<li>povinna literatura pre progamatora</li>
+						<li>vyzaduje uz urcite znalosti</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
 				<h2>Faktory vplývajúce na efektivitu</h2>
@@ -88,9 +122,19 @@
 					<li>kvalita kódu</li>
 					<li>rýchla spätná väzba</li>
 				</ul>
+				<aside class="notes">
+					<ul>
+						<li>ake ine faktory vam napadnu?</li>
+						<li>spatna vazba, automatizacia</li>
+						<li>- JUnit (Edit and Pray vs Cover and Modify)</li>
+						<li>- CI, CD, QA, DevOps</li>
+						<li>budem sa venovat hlavne kvalite kodu a ako ju dosiahnut</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
 				<blockquote>Vaša schopnosť porozumieť kódu je kritická na to aby ste ho menili bez strachu z chyby.</blockquote>
+				<aside class="notes">Ak aj nie ste lakavy typ, predstavte si takeho klienta...</aside>
 			</section>
 			<section>
 				<h2>Clean code</h2>
@@ -99,6 +143,18 @@
 					<li>Single responsibility principle (SRP)</li>
 					<li>Keep it simple, stupid (KISS)</li>
 				</ul>
+				<aside class="notes">
+					<ul>
+						<li>vyberam si ceresnicky</li>
+						<li>DRY - preco sa nemame opakovat?</li>
+						<li>- viac pisania? - zly argument - cas straveny pisanim vs citanim kodu ;-)</li>
+						<li>- zabudanie - zmenu neaplikujem na vsetky instancie riesenia nejakeho problemu, ukazka</li>
+						<li>SRP - kto bol na minulej prednaske?</li>
+						<li>- co su to vedlajsie efekty? nemenitelne datove struktury?</li>
+						<li>KISS - preferujem Keep it simple, SMART :-)</li>
+						<li>- jednoduchy neznamena lahky, vysvetlim...</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
 				<h2>Jednoduchosť</h2>
@@ -106,10 +162,22 @@
 					<li>jednoduchý vs. ľahký</li>
 					<li><a href="https://www.infoq.com/presentations/Simple-Made-Easy">Simple Made Easy</a></li>
 				</ul>
+				<aside class="notes">
+					<ul>
+						<li>jednoduchy - jeden duch</li>
+						<li>lahky - po ruke</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
 				<blockquote>"Zdá sa, že dokonalosť sa nedosahuje vtedy, keď už nie je možné nič pridať, ale vtedy, keď už nie je možné nič odobrať."
 					Antoine de Saint-Exupéry</blockquote>
+				<aside class="notes">
+					<ul>
+						<li>Moze byt lietadlo jednoduche?</li>
+						<li>Zda sa, ze ano (nejakym sposobom)...</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
 				<h2>Funkcionálne programovanie</h2>
@@ -123,9 +191,51 @@
 			</section>
 			<section>
 				<pre><code data-trim class="js">
-function program (args) {
-   for (var i = 0; i < args.length; i++) {
-      console.log(args[i]);
+// const sampleData = ...
+// Request 1: log the data to console
+// 1. option
+for (var i = 0; i < sampleData.length; i++) {
+   console.log(sampleData[i]);
+}
+// 2. option
+console.log(sampleData); // Why this works?
+				</code></pre>
+			</section>
+			<section>
+				<pre><code data-trim class="js">
+// Request 2: make the log pretty
+for (var i = 0; i < sampleData.length; i++) {
+   console.log(sampleData[i].first_name + ' '
+            + sampleData[i].last_name + ' from '
+            + sampleData[i].city + ', '
+            + sampleData[i].state);
+}
+				</code></pre>
+			</section>
+			<section>
+				<pre><code data-trim class="js">
+// Request 2: make the log pretty
+function personPrettyPrint(person) {
+   return person.first_name + ' '
+            + person.last_name + ' from '
+            + person.city + ', '
+            + person.state;
+}
+// 1. option
+for (var i = 0; i < sampleData.length; i++) {
+   console.log(personPrettyPrint(sampleData[i]));
+}
+// 2. option
+console.log(personPrettyPrint(sampleData));
+//Why this doesn't work?
+//How should we change it to make it work?
+				</code></pre>
+			</section>
+			<section>
+				<pre><code data-trim class="js">
+function sampleFunction (data) {
+   for (var i = 0; i < data.length; i++) {
+      console.log(data[i]);
    }
 }
 				</code></pre>
@@ -133,13 +243,23 @@ function program (args) {
 			<section>
 				<h2>Záver</h2>
 				<ul>
-					<li>Isaac Newton</li>
-					<li>Pozorovanie vs. objavovanie</li>
-					<li>Priestor vs. časopriestor</li>
-					<li>F = m * a</li>
-					<li>Okamih vs. čas</li>
 					<li><a href="http://www.tyzden.sk/podlampou/20070/lampa-isaac-newton/">Lampa: Isaac Newton</a></li>
+					<li>Pozorovanie vs. objavovanie</li>
+					<li><a href="https://www.youtube.com/playlist?list=PL7664379246A246CB">Douglas Crockford o JavaScripte</a></li>
 				</ul>
+				<aside class="notes">
+					<ul>
+						<li>Priestor vs. časopriestor / Okamih vs. čas / F = m * a</li>
+						<li>... Funkcie vyssieho radu pomahaju zjednodusovat niektore koncepty, pretoze ich spravne pouzitie prirodzene podporuje usporiadanost systemu.</li>
+						<li>Ukazali sme si, aka potrebna je udrzba a teda udrzatelnost kodu.</li>
+						<li>- niektore dobre principy - clean code</li>
+						<li>- ze lahky a jednoduchy nie je to iste</li>
+						<li>- niektore dobre riesenia - funkcionalne programovanie</li>
+						<li>- a konecne verim, ze ak si z tohto stretnutia nieco zoberiete, tak to bude chut oboznamit sa s tymito aspektmi hlbsie a chut objavovat tajomstva funkcionalneho programatora</li>
+						<li>Nezabudnite vyplnit feedback, pripadne dat na vas kontakt v pripade zaujmu</li>
+						<li>Dakujem za pozornost</li>
+					</ul>
+				</aside>
 			</section>
 		</div>
 	</div>
