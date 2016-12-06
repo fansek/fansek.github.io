@@ -174,6 +174,7 @@
 					Antoine de Saint-Exupéry</blockquote>
 				<aside class="notes">
 					<ul>
+						<li>francúzsky spisovateľ, letec, filozof</li>
 						<li>Moze byt lietadlo jednoduche?</li>
 						<li>Zda sa, ze ano (nejakym sposobom)...</li>
 					</ul>
@@ -182,12 +183,14 @@
 			<section>
 				<h2>Funkcionálne programovanie</h2>
 				<ul>
-					<li>Nemeniteľné dátové štruktúry</li>
-					<li>Vedľajšie efekty</li>
-					<li>Stav a jednoduchosť sa nemajú radi</li>
-					<li>Okamih vs. cas</li>
-					<li><a href="http://www.tyzden.sk/podlampou/20070/lampa-isaac-newton/">Lampa: Isaac Newton</a></li>
+					<li>Nemeniteľné dátové štruktúry / Vedľajšie efekty</li>
+					<li>Funkcie vyššieho rádu</li>
 				</ul>
+				<aside class="notes">
+					<ul>
+						<li>funkcionalne programovanie ako ukazeme je riesenim pre mnohe vyzvy clean code</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
 				<pre><code data-trim class="js">
@@ -199,6 +202,8 @@ for (var i = 0; i < sampleData.length; i++) {
 }
 // 2. option
 console.log(sampleData); // Why this works?
+// 3. option
+sampleData.forEach(console.log); // How this works?
 				</code></pre>
 			</section>
 			<section>
@@ -233,11 +238,26 @@ console.log(personPrettyPrint(sampleData));
 			</section>
 			<section>
 				<pre><code data-trim class="js">
-function sampleFunction (data) {
-   for (var i = 0; i < data.length; i++) {
-      console.log(data[i]);
-   }
+// Request 2: make the log pretty
+function personPrettyPrint(person) {
+   return person.first_name + ' '
+            + person.last_name + ' from '
+            + person.city + ', '
+            + person.state;
 }
+// 3. option
+sampleData.map(personPrettyPrint).forEach(console.log);
+// or
+sampleData.map(personPrettyPrint).forEach((str) => console.log(str));
+				</code></pre>
+			</section>
+			<section>
+				<pre><code data-trim class="js">
+// Request 3: show only people with first name starting with A
+sampleData
+	.filter((person) => person.first_name.startsWith('A'))
+	.map(personPrettyPrint)
+	.forEach((str) => console.log(str));
 				</code></pre>
 			</section>
 			<section>
@@ -250,12 +270,14 @@ function sampleFunction (data) {
 				<aside class="notes">
 					<ul>
 						<li>Priestor vs. časopriestor / Okamih vs. čas / F = m * a</li>
-						<li>... Funkcie vyssieho radu pomahaju zjednodusovat niektore koncepty, pretoze ich spravne pouzitie prirodzene podporuje usporiadanost systemu.</li>
+						<li>... Funkcie vyssieho radu pomahaju zjednodusovat niektore koncepty, pretoze ich spravne pouzitie prirodzene podporuje
+							usporiadanost systemu.</li>
 						<li>Ukazali sme si, aka potrebna je udrzba a teda udrzatelnost kodu.</li>
 						<li>- niektore dobre principy - clean code</li>
 						<li>- ze lahky a jednoduchy nie je to iste</li>
 						<li>- niektore dobre riesenia - funkcionalne programovanie</li>
-						<li>- a konecne verim, ze ak si z tohto stretnutia nieco zoberiete, tak to bude chut oboznamit sa s tymito aspektmi hlbsie a chut objavovat tajomstva funkcionalneho programatora</li>
+						<li>- a konecne verim, ze ak si z tohto stretnutia nieco zoberiete, tak to bude chut oboznamit sa s tymito aspektmi hlbsie
+							a chut objavovat tajomstva funkcionalneho programatora</li>
 						<li>Nezabudnite vyplnit feedback, pripadne dat na vas kontakt v pripade zaujmu</li>
 						<li>Dakujem za pozornost</li>
 					</ul>
@@ -282,6 +304,14 @@ function sampleFunction (data) {
 			});
 	</script>
 	<script src="example/sampleData.js"></script>
+	<script>
+			function personPrettyPrint(person) {
+				return person.first_name + ' '
+							+ person.last_name + ' from '
+							+ person.city + ', '
+							+ person.state;
+			}
+	</script>
 </body>
 
 </html>
